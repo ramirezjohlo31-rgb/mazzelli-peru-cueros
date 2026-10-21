@@ -124,10 +124,20 @@ if (-not $autenticado) {
     exit 1
   }
 } else {
-  Write-Aviso 'Comprobando el scope workflow (necesario para subir .github/workflows/*)...'
-  $ErrorActionPreference = 'Continue'
-  & $gh auth refresh -h github.com -s workflow
-  $ErrorActionPreference = 'Stop'
+  # Sin el scope `workflow` GitHub bloquea el push de .github/workflows/*.
+  $scopes = (& $gh auth status 2>&1 | Select-String -Pattern 'Token scopes' | Out-String)
+  if ($scopes -notmatch "'workflow'") {
+    Write-Host '   El token no tiene el scope workflow (obligatorio para subir el pipeline de Actions).' -ForegroundColor Yellow
+    Write-Host '   Se abrira el navegador para ampliar los permisos...' -ForegroundColor Cyan
+    $ErrorActionPreference = 'Continue'
+    & $gh auth refresh -h github.com -s workflow
+    $ErrorActionPreference = 'Stop'
+    if ($LASTEXITCODE -ne 0) {
+      Write-Host '   No se pudieron ampliar los permisos. Reintenta manualmente:' -ForegroundColor Red
+      Write-Host '     gh auth refresh -h github.com -s workflow' -ForegroundColor Red
+      exit 1
+    }
+  }
 }
 Write-Ok 'Sesion iniciada'
 
