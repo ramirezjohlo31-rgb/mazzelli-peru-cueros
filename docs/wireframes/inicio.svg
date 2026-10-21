@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+
+  <rect width="1200" height="1200" fill="#FFFFFF"/>
+  <text x="28" y="1180" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">Wireframe — Inicio   ·   Mazzelli Cueros Perú   ·   Avance 1 (Semana 8)</text>
+  <line x1="0" y1="1160" x2="1200" y2="1160" stroke="#E5E7EB" stroke-width="2" stroke-linecap="round"/>
+
+  
+  <rect x="0" y="0" width="1200" height="68" rx="0" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <rect x="28" y="18" width="34" height="34" rx="8" fill="#8B5E3C" stroke="#8B5E3C" stroke-width="2"/>
+  <text x="74" y="41" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1F2937">MAZZELLI</text>
+  <text x="250" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Inicio</text>
+  <text x="355" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Nosotros</text>
+  <text x="460" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Productos</text>
+  <text x="565" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Galería</text>
+  <text x="670" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Servicios</text>
+  <text x="775" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Contacto</text>
+  <rect x="1010" y="16" width="160" height="36" rx="18" fill="#8B5E3C" stroke="#8B5E3C" stroke-width="2"/>
+  <text x="1032" y="39" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">WhatsApp</text>
+
+  <rect x="0" y="68" width="1200" height="430" rx="0" fill="#FBF8F4" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="70" y="160" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#1F2937">CUERO QUE CUENTA</text>
+  <text x="70" y="205" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#8B5E3C">HISTORIAS</text>
+  <text x="70" y="250" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Curtimos con taninos vegetales y cosemos a mano cada pieza.</text>
+  <rect x="70" y="285" width="210" height="46" rx="23" fill="#8B5E3C" stroke="#8B5E3C" stroke-width="2"/>
+  <text x="112" y="313" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Ver catálogo</text>
+  <rect x="300" y="285" width="230" height="46" rx="23" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="2"/>
+  <text x="330" y="313" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">WhatsApp</text>
+  <text x="70" y="420" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#8B5E3C">15+</text><text x="70" y="443" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Años de taller</text>
+  <text x="200" y="420" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#8B5E3C">3 000+</text><text x="200" y="443" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Piezas artesanales</text>
+  <text x="330" y="420" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#8B5E3C">100%</text><text x="330" y="443" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Cuero genuino</text>
+  <rect x="760" y="120" width="370" height="320" rx="14" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+
+  <text x="70" y="560" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#8B5E3C">CATEGORÍAS</text>
+  <rect x="70" y="585" width="190" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="142" y="610" width="46" height="46" rx="23" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/><text x="90" y="690" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Carteras</text><text x="90" y="712" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Ver más →</text>
+  <rect x="282" y="585" width="190" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="354" y="610" width="46" height="46" rx="23" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/><text x="302" y="690" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Cinturones</text><text x="302" y="712" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Ver más →</text>
+  <rect x="494" y="585" width="190" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="566" y="610" width="46" height="46" rx="23" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/><text x="514" y="690" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Billeras</text><text x="514" y="712" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Ver más →</text>
+  <rect x="706" y="585" width="190" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="778" y="610" width="46" height="46" rx="23" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/><text x="726" y="690" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Mochilas</text><text x="726" y="712" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Ver más →</text>
+  <rect x="918" y="585" width="190" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="990" y="610" width="46" height="46" rx="23" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/><text x="938" y="690" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Accesorios</text><text x="938" y="712" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Ver más →</text>
+
+  <text x="70" y="800" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#8B5E3C">PRODUCTOS DESTACADOS</text>
+  <rect x="70" y="825" width="240" height="300" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="70" y="825" width="240" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="90" y="1005" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Cartera "Soy Lima"</text><text x="90" y="1040" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#8B5E3C">S/ 189.00</text>
+  <rect x="335" y="825" width="240" height="300" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="335" y="825" width="240" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="355" y="1005" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Billetera Clásica</text><text x="355" y="1040" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#8B5E3C">S/ 189.00</text>
+  <rect x="600" y="825" width="240" height="300" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="600" y="825" width="240" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="620" y="1005" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Cinturón "Nilo"</text><text x="620" y="1040" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#8B5E3C">S/ 189.00</text>
+  <rect x="865" y="825" width="240" height="300" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="865" y="825" width="240" height="150" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="885" y="1005" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Mochila Urbana</text><text x="885" y="1040" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#8B5E3C">S/ 189.00</text>
+  
+  <rect x="0" y="1020" width="1200" height="180" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="28" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2937">MAZZELLI</text>
+  <text x="28" y="1085" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Industrias Mazzelli-Perú Cueros E.I.R.L.</text>
+  <text x="320" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9CA3AF">NAVEGACIÓN</text>
+  <text x="320" y="1082" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Inicio · Nosotros · Productos</text>
+  <text x="320" y="1100" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Galería · Servicios · Contacto</text>
+  <text x="640" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9CA3AF">CATEGORÍAS</text>
+  <text x="640" y="1082" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Carteras · Cinturones · Billeras</text>
+  <text x="640" y="1100" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Mochilas · Accesorios</text>
+  <text x="930" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9CA3AF">CONTACTO</text>
+  <text x="930" y="1082" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Av. Los Frutales 1450, Lima</text>
+  <text x="930" y="1100" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">+51 987 654 321</text>
+
+  <g><rect x="40" y="90" width="44" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="105" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">HERO</text></g>
+  <g><rect x="900" y="430" width="128" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="908" y="445" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">IMAGEN DESTACADA</text></g>
+  <g><rect x="40" y="535" width="86" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="550" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">CATEGORÍAS</text></g>
+  <g><rect x="40" y="775" width="79" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="790" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">PRODUCTOS</text></g>
+  <g><rect x="40" y="995" width="135" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="1010" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">CTA / TESTIMONIOS</text></g>
+
+</svg>

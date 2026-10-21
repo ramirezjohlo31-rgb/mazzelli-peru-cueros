@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+
+  <rect width="1200" height="1200" fill="#FFFFFF"/>
+  <text x="28" y="1180" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">Wireframe — Ficha de producto   ·   Mazzelli Cueros Perú   ·   Avance 1 (Semana 8)</text>
+  <line x1="0" y1="1160" x2="1200" y2="1160" stroke="#E5E7EB" stroke-width="2" stroke-linecap="round"/>
+
+  
+  <rect x="0" y="0" width="1200" height="68" rx="0" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <rect x="28" y="18" width="34" height="34" rx="8" fill="#8B5E3C" stroke="#8B5E3C" stroke-width="2"/>
+  <text x="74" y="41" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1F2937">MAZZELLI</text>
+  <text x="250" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Inicio</text>
+  <text x="355" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Nosotros</text>
+  <text x="460" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Productos</text>
+  <text x="565" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Galería</text>
+  <text x="670" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Servicios</text>
+  <text x="775" y="41" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Contacto</text>
+  <rect x="1010" y="16" width="160" height="36" rx="18" fill="#8B5E3C" stroke="#8B5E3C" stroke-width="2"/>
+  <text x="1032" y="39" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">WhatsApp</text>
+
+  <rect x="0" y="68" width="1200" height="44" rx="0" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="70" y="96" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">Inicio / Productos / Carteras / Cartera "Soy Lima"</text>
+  <rect x="70" y="140" width="520" height="380" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="90" y="170" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">IMAGEN PRINCIPAL</text>
+  <rect x="70" y="540" width="120" height="90" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="80" y="620" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9CA3AF">Miniatura</text>
+  <rect x="202" y="540" width="120" height="90" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="212" y="620" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9CA3AF">Miniatura</text>
+  <rect x="334" y="540" width="120" height="90" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="344" y="620" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9CA3AF">Miniatura</text>
+  <rect x="466" y="540" width="120" height="90" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="476" y="620" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9CA3AF">Miniatura</text>
+
+  <text x="640" y="175" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#8B5E3C">CARTERAS</text>
+  <text x="640" y="215" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#1F2937">Cartera "Soy Lima"</text>
+  <rect x="640" y="235" width="110" height="26" rx="13" fill="#FEF3C7" stroke="#FCD34D" stroke-width="2"/>
+  <text x="652" y="253" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#92400E">Más vendido</text>
+  <rect x="760" y="235" width="90" height="26" rx="13" fill="#DCFCE7" stroke="#86EFAC" stroke-width="2"/>
+  <text x="772" y="253" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#166534">Disponible</text>
+  <text x="640" y="305" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#8B5E3C">S/ 189.00</text>
+  <text x="640" y="330" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Precio por unidad · IGV no incluido</text>
+  <text x="640" y="375" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Cartera de hombro en cuero vacuno curtido vegetal,</text>
+  <text x="640" y="395" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">con cierre de cremallera de latón y forro en lino.</text>
+  <line x1="640" y1="425" x2="1130" y2="425" stroke="#E5E7EB" stroke-width="1" stroke-linecap="round"/>
+    <text x="640" y="420" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1F2937">Materiales</text>
+    <text x="820" y="420" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">Cuero vacuno · Lino · Latón</text>
+  <line x1="640" y1="459" x2="1130" y2="459" stroke="#E5E7EB" stroke-width="1" stroke-linecap="round"/>
+    <text x="640" y="454" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1F2937">Medidas</text>
+    <text x="820" y="454" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">22 × 14 × 8 cm</text>
+  <line x1="640" y1="493" x2="1130" y2="493" stroke="#E5E7EB" stroke-width="1" stroke-linecap="round"/>
+    <text x="640" y="488" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1F2937">Colores</text>
+    <text x="820" y="488" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">Cognac · Negro · Chocolate</text>
+  <line x1="640" y1="527" x2="1130" y2="527" stroke="#E5E7EB" stroke-width="1" stroke-linecap="round"/>
+    <text x="640" y="522" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1F2937">Código</text>
+    <text x="820" y="522" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">P-001</text>
+  <rect x="640" y="570" width="300" height="46" rx="10" fill="#8B5E3C" stroke="#8B5E3C" stroke-width="2"/>
+  <text x="672" y="598" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Consultar por WhatsApp</text>
+  <rect x="955" y="570" width="175" height="46" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="2"/>
+  <text x="978" y="598" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F2937">Cotizar</text>
+  <rect x="640" y="640" width="1060" height="110" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="665" y="672" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#8B5E3C">GARANTÍAS DEL PRODUCTO</text>
+  <text x="665" y="700" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9CA3AF">✓ Verificación de calidad  ✓  Garantía de 1 año  ✓  Envíos a todo el Perú</text>
+
+  <text x="70" y="690" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#8B5E3C">OTROS PRODUCTOS DE CARTERAS</text>
+  <rect x="70" y="715" width="180" height="200" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="70" y="715" width="180" height="120" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="85" y="870" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Relacionado</text>
+  <rect x="270" y="715" width="180" height="200" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="270" y="715" width="180" height="120" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="285" y="870" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Relacionado</text>
+  <rect x="470" y="715" width="180" height="200" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><rect x="470" y="715" width="180" height="120" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><text x="485" y="870" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Relacionado</text>
+  
+  <rect x="0" y="1020" width="1200" height="180" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="28" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2937">MAZZELLI</text>
+  <text x="28" y="1085" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Industrias Mazzelli-Perú Cueros E.I.R.L.</text>
+  <text x="320" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9CA3AF">NAVEGACIÓN</text>
+  <text x="320" y="1082" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Inicio · Nosotros · Productos</text>
+  <text x="320" y="1100" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Galería · Servicios · Contacto</text>
+  <text x="640" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9CA3AF">CATEGORÍAS</text>
+  <text x="640" y="1082" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Carteras · Cinturones · Billeras</text>
+  <text x="640" y="1100" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Mochilas · Accesorios</text>
+  <text x="930" y="1060" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9CA3AF">CONTACTO</text>
+  <text x="930" y="1082" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">Av. Los Frutales 1450, Lima</text>
+  <text x="930" y="1100" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9CA3AF">+51 987 654 321</text>
+
+  <g><rect x="40" y="75" width="100" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="90" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">MIGAS DE PAN</text></g>
+  <g><rect x="40" y="115" width="65" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="130" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">GALERÍA</text></g>
+  <g><rect x="40" y="515" width="86" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="530" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">MINIATURAS</text></g>
+  <g><rect x="600" y="150" width="93" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="608" y="165" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">INFORMACIÓN</text></g>
+  <g><rect x="600" y="545" width="72" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="608" y="560" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">ACCIONES</text></g>
+  <g><rect x="600" y="615" width="79" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="608" y="630" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">GARANTÍAS</text></g>
+  <g><rect x="40" y="665" width="100" height="22" rx="11" fill="#8B5E3C" opacity=".12"/>
+    <text x="48" y="680" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#8B5E3C">RELACIONADOS</text></g>
+
+</svg>
