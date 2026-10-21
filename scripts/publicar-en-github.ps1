@@ -30,6 +30,19 @@ function Write-Aviso([string]$Mensaje) {
   Write-Host "   $Mensaje" -ForegroundColor DarkGray
 }
 
+# Ejecuta un comando ignorando su stderr: con $ErrorActionPreference = 'Stop',
+# la salida de error de los ejecutables nativos (gh, git) abortaria el script.
+function Invoke-Silencioso([scriptblock]$Bloque) {
+  $previo = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
+  try {
+    & $Bloque *> $null
+    return $LASTEXITCODE
+  } finally {
+    $ErrorActionPreference = $previo
+  }
+}
+
 # Localiza un ejecutable en el PATH o en las rutas de instalacion habituales.
 function Find-Executable([string]$Nombre, [string[]]$RutasAlternativas) {
   $cmd = Get-Command $Nombre -ErrorAction SilentlyContinue
@@ -74,6 +87,14 @@ if (-not $gh) {
 }
 Write-Ok "GitHub CLI: $gh"
 
+# `gh` invoca a `git` por su cuenta (para leer el remoto y detectar el repo).
+# Si git no esta en el PATH, gh cree que el directorio no es un repositorio.
+$directorioGit = Split-Path -Parent $git
+if ($env:PATH -notlike "*$directorioGit*") {
+  $env:PATH = "$directorioGit;$env:PATH"
+  Write-Aviso "Git anadido al PATH: $directorioGit"
+}
+
 # ── 2. Compilacion local previa ──────────────────────────────────────────
 
 Write-Paso 'Verificando que el proyecto compila'
@@ -90,37 +111,59 @@ Write-Ok 'Build correcto'
 Write-Paso 'Verificando la sesion de GitHub'
 
 $autenticado = $false
-& $gh auth status *> $null
-if ($LASTEXITCODE -eq 0) { $autenticado = $true }
+if ((Invoke-Silencioso { & $gh auth status }) -eq 0) { $autenticado = $true }
 
 if (-not $autenticado) {
   Write-Host '   No hay sesion iniciada. Se abrira el navegador para iniciar sesion...' -ForegroundColor Cyan
-  & $gh auth login --hostname github.com --git-protocol https --web --skip-ssh-key
+  $ErrorActionPreference = 'Continue'
+  # El scope `workflow` es obligatorio: GitHub rechaza subir .github/workflows/* sin el.
+  & $gh auth login --hostname github.com --git-protocol https --web --skip-ssh-key --scopes workflow
+  $ErrorActionPreference = 'Stop'
   if ($LASTEXITCODE -ne 0) {
     Write-Host '   No se pudo iniciar la sesion. Reintenta manualmente:  gh auth login' -ForegroundColor Red
     exit 1
   }
+} else {
+  Write-Aviso 'Comprobando el scope workflow (necesario para subir .github/workflows/*)...'
+  $ErrorActionPreference = 'Continue'
+  & $gh auth refresh -h github.com -s workflow
+  $ErrorActionPreference = 'Stop'
 }
 Write-Ok 'Sesion iniciada'
+
+# Configura el credential helper para que git use el token de gh en los pushes.
+Invoke-Silencioso { & $gh auth setup-git } | Out-Null
 
 # ── 4. Crear el repositorio (si no existe) ──────────────────────────────
 
 Write-Paso "Preparando el repositorio $UrlRepo"
 
 $existe = $false
-& $gh repo view $UrlRepo *> $null
-if ($LASTEXITCODE -eq 0) { $existe = $true }
+if ((Invoke-Silencioso { & $gh repo view $UrlRepo }) -eq 0) { $existe = $true }
 
 if ($existe) {
   Write-Aviso "El repositorio ya existe: $UrlRepo"
 } else {
+  # `gh repo create --remote origin` falla si el remoto ya existe: lo retiramos antes.
+  Invoke-Silencioso { & $git remote remove origin } | Out-Null
   Write-Host '   Creando el repositorio publico y enviando el codigo...' -ForegroundColor Cyan
+  $ErrorActionPreference = 'Continue'
   & $gh repo create $UrlRepo --public --description 'Sitio web corporativo de Industrias Mazzelli-Peru Cueros E.I.R.L. - catalogo de cuero artesanal' --source . --remote origin --push
-  if ($LASTEXITCODE -ne 0) {
-    Write-Host '   No se pudo crear el repositorio.' -ForegroundColor Red
-    exit 1
+  $codigo = $LASTEXITCODE
+  $ErrorActionPreference = 'Stop'
+  if ($codigo -ne 0) {
+    # Puede que el repo se haya creado y solo falle el push o el remoto: lo comprobamos.
+    if ((Invoke-Silencioso { & $gh repo view $UrlRepo }) -eq 0) {
+      Write-Aviso 'El repositorio se creo, pero el envio automatico fallo. Reintentando el push...'
+      & $git remote remove origin 2>&1 | Out-Null
+      & $git remote add origin $UrlRepo
+    } else {
+      Write-Host '   No se pudo crear el repositorio.' -ForegroundColor Red
+      exit 1
+    }
+  } else {
+    Write-Ok 'Repositorio creado y codigo enviado'
   }
-  Write-Ok 'Repositorio creado y codigo enviado'
 }
 
 # ── 5. Asegurar el remoto y subir las ramas ──────────────────────────────
@@ -128,19 +171,22 @@ if ($existe) {
 Write-Paso 'Sincronizando el remoto'
 & $git remote set-url origin $UrlRepo
 
-if (-not (& $git branch --list develop)) { & $git branch develop }
+$ramas = & $git branch --list develop
+if (-not $ramas) { & $git branch develop | Out-Null }
+
 Write-Aviso 'Subiendo develop...'
+$ErrorActionPreference = 'Continue'
 & $git push -u origin develop
 
 Write-Aviso 'Subiendo main (esto dispara el despliegue)...'
 & $git push -u origin main --tags
+$ErrorActionPreference = 'Stop'
 
 # ── 6. Activar GitHub Pages ──────────────────────────────────────────────
 
 Write-Paso 'Activando GitHub Pages'
 
-& $gh api --method POST "repos/$Propietario/$Repositorio/pages" -f build_type=workflow *> $null
-if ($LASTEXITCODE -eq 0) {
+if ((Invoke-Silencioso { & $gh api --method POST "repos/$Propietario/$Repositorio/pages" -f build_type=workflow }) -eq 0) {
   Write-Ok 'GitHub Pages activado (build_type=workflow)'
 } else {
   Write-Aviso 'Pages ya estaba activo o se activara manualmente en Settings > Pages.'
@@ -152,15 +198,20 @@ Write-Paso 'Esperando el despliegue'
 
 $runId = $null
 for ($i = 0; $i -lt 30; $i++) {
+  $ErrorActionPreference = 'Continue'
   $runId = (& $gh run list --repo $UrlRepo --workflow 'deploy.yml' --limit 1 --json databaseId -q '.[0].databaseId' 2>$null)
+  $ErrorActionPreference = 'Stop'
   if ($runId) { break }
   Start-Sleep -Seconds 2
 }
 
 if ($runId) {
   Write-Aviso "Ejecutando el workflow #$runId (esto puede tardar 1-2 minutos)..."
+  $ErrorActionPreference = 'Continue'
   & $gh run watch $runId --repo $UrlRepo --exit-status
-  if ($LASTEXITCODE -eq 0) {
+  $codigo = $LASTEXITCODE
+  $ErrorActionPreference = 'Stop'
+  if ($codigo -eq 0) {
     Write-Ok 'Despliegue completado correctamente'
   } else {
     Write-Host '   El workflow fallo. Revisa la pestaña Actions del repositorio.' -ForegroundColor Red
