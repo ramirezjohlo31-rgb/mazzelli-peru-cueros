@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "mermaid-js.mermaid-vscode",
+    "editorconfig.editorconfig",
+    "github.vscode-github-pull-request",
+    "yzhang.markdown-all-in-one"
+  ]
+}
