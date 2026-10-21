@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3E2A20" />
+
+    <title>Industrias Mazzelli-Perú Cueros E.I.R.L. | Cuero artesanal del Perú</title>
+    <meta
+      name="description"
+      content="Industrias Mazzelli-Perú Cueros E.I.R.L.: manufacturer de cuero artesanal peruano. Carteras, cinturones, billeteras y mochilas en cuero genuino, con fabricación a medida y venta mayorista."
+    />
+    <meta
+      name="keywords"
+      content="cuero artesanal Perú, carteras de cuero, cinturones de cuero, billeteras, mochilas de cuero, cuero vacuno, curtido vegetal, Mazzelli"
+    />
+    <meta name="author" content="Johan Brayan Ramírez Ccoyllo" />
+    <meta name="robots" content="index, follow" />
+
+    <!--
+      Redirección SPA para GitHub Pages.
+      GitHub Pages no tiene reescritura de rutas: al abrir /productos directamente
+      sirve 404.html, que redirige a la raíz conservando la ruta en sessionStorage.
+      Este script la restaura antes de que React monte la aplicación.
+    -->
+    <script>
+      ;(function () {
+        try {
+          var ruta = sessionStorage.getItem('mazzelli-redirect')
+          if (ruta) {
+            sessionStorage.removeItem('mazzelli-redirect')
+            history.replaceState(null, '', ruta)
+          }
+        } catch (e) {
+          /* modo privado: se ignora silenciosamente */
+        }
+      })()
+    </script>
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Industrias Mazzelli-Perú Cueros E.I.R.L." />
+    <meta property="og:title" content="Industrias Mazzelli-Perú Cueros E.I.R.L." />
+    <meta
+      property="og:description"
+      content="Cuero artesanal peruano hecho a mano. Catálogo de carteras, cinturones, billeteras y mochilas."
+    />
+    <meta property="og:image" content="/og-image.svg" />
+
+    <!-- Tipografías de marca -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

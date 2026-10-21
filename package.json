@@ -1,0 +1,44 @@
+{
+  "name": "mazzelli-peru-cueros",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Sitio web corporativo de Industrias Mazzelli-Perú Cueros E.I.R.L. — catálogo de cuero artesanal peruano",
+  "type": "module",
+  "author": "Johan Brayan Ramirez Ccoyllo <332580772+ramirezjohlo31-rgb@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramirezjohlo31-rgb/mazzelli-peru-cueros.git"
+  },
+  "homepage": "https://ramirezjohlo31-rgb.github.io/mazzelli-peru-cueros/",
+  "keywords": [
+    "react",
+    "vite",
+    "tailwindcss",
+    "spa",
+    "cuero",
+    "mazzelli"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\" \"docs/**/*.md\"",
+    "preview": "vite preview",
+    "assets": "node scripts/generar-assets.mjs",
+    "wireframes": "node scripts/generar-wireframes.mjs"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.88.0",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.4"
+  }
+}

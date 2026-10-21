@@ -1,0 +1,7 @@
+dist
+node_modules
+package-lock.json
+docs/wireframes
+public/productos
+public/galeria
+*.svg
