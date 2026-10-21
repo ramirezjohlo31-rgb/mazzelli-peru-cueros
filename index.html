@@ -47,7 +47,8 @@
       property="og:description"
       content="Cuero artesanal peruano hecho a mano. Catálogo de carteras, cinturones, billeteras y mochilas."
     />
-    <meta property="og:image" content="/og-image.svg" />
+    <!-- %BASE_URL% lo resuelve Vite: así la imagen funciona tanto en dev como en GitHub Pages -->
+    <meta property="og:image" content="%BASE_URL%og-image.svg" />
 
     <!-- Tipografías de marca -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

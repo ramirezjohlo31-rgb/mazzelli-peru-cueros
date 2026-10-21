@@ -15,11 +15,19 @@ import { defineConfig } from 'vite'
  * donde index.html la restaura con history.replaceState() antes de montar React.
  */
 function paginasEstaticasPlugin() {
+  /** Directorio de salida real, resuelto por Vite (respeta build.outDir). */
+  let directorioSalida = 'dist'
+
   return {
     name: 'mazzelli:paginas-estaticas',
     apply: 'build',
+
+    configResolved(config) {
+      directorioSalida = config.build.outDir
+    },
+
     closeBundle() {
-      const raiz = resolve(process.cwd(), 'dist')
+      const raiz = resolve(directorioSalida)
       const index = resolve(raiz, 'index.html')
       const destino = resolve(raiz, '404.html')
 
@@ -30,7 +38,7 @@ function paginasEstaticasPlugin() {
       ;(function () {
         try {
           sessionStorage.setItem('mazzelli-redirect', location.pathname + location.search + location.hash)
-          location.replace('/mazzelli-peru-cueros/')
+          location.replace('${base.replace(/\/+$/, '')}/')
         } catch (e) {}
       })()
     </script>`
@@ -43,11 +51,18 @@ function paginasEstaticasPlugin() {
   }
 }
 
+/**
+ * Base del sitio.
+ * Por defecto: https://<usuario>.github.io/<repositorio>
+ * Se puede sobreescribir con la variable de entorno SITE_BASE.
+ */
+const base = process.env.SITE_BASE ?? '/mazzelli-peru-cueros/'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), paginasEstaticasPlugin()],
   // Ruta base para GitHub Pages: https://<usuario>.github.io/<repositorio>
-  base: '/mazzelli-peru-cueros/',
+  base,
   build: {
     outDir: 'dist',
     sourcemap: false,

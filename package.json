@@ -25,6 +25,7 @@
     "lint": "oxlint",
     "format": "prettier --write \"src/**/*.{js,jsx,css}\" \"docs/**/*.md\"",
     "preview": "vite preview",
+    "publish": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/publicar-en-github.ps1",
     "assets": "node scripts/generar-assets.mjs",
     "wireframes": "node scripts/generar-wireframes.mjs"
   },
