@@ -1,4 +1,5 @@
 import { proceso } from '../data/empresa.js'
+import { recurso } from '../utils/recursos.js'
 import Section from '../components/ui/Section.jsx'
 import SectionTitle from '../components/ui/SectionTitle.jsx'
 import Button from '../components/ui/Button.jsx'
@@ -6,22 +7,22 @@ import Button from '../components/ui/Button.jsx'
 /** Galería del taller y del proceso de fabricación. */
 export default function Galeria() {
   const imagenes = [
-    { src: '/galeria/seleccion.svg', titulo: 'Selección de pieles', categoria: 'Taller' },
+    { src: recurso('galeria/seleccion.svg'), titulo: 'Selección de pieles', categoria: 'Taller' },
     {
-      src: '/galeria/curtido.svg',
+      src: recurso('galeria/curtido.svg'),
       titulo: 'Tinas de curtido vegetal',
       categoria: 'Proceso',
     },
-    { src: '/galeria/corte.svg', titulo: 'Corte y patronaje', categoria: 'Proceso' },
-    { src: '/galeria/cosido.svg', titulo: 'Costura a mano', categoria: 'Taller' },
+    { src: recurso('galeria/corte.svg'), titulo: 'Corte y patronaje', categoria: 'Proceso' },
+    { src: recurso('galeria/cosido.svg'), titulo: 'Costura a mano', categoria: 'Taller' },
     {
-      src: '/galeria/acabado.svg',
+      src: recurso('galeria/acabado.svg'),
       titulo: 'Sellado y acabado de bordes',
       categoria: 'Proceso',
     },
-    { src: '/galeria/calidad.svg', titulo: 'Control de calidad', categoria: 'Calidad' },
-    { src: '/galeria/empaque.svg', titulo: 'Empaque y despacho', categoria: 'Logística' },
-    { src: '/galeria/tienda.svg', titulo: 'Showroom en Lima', categoria: 'Showroom' },
+    { src: recurso('galeria/calidad.svg'), titulo: 'Control de calidad', categoria: 'Calidad' },
+    { src: recurso('galeria/empaque.svg'), titulo: 'Empaque y despacho', categoria: 'Logística' },
+    { src: recurso('galeria/tienda.svg'), titulo: 'Showroom en Lima', categoria: 'Showroom' },
   ]
 
   return (
@@ -80,7 +81,7 @@ export default function Galeria() {
               descripcion="Recibimos semanalmente con cita previa para que veas el proceso completo en vivo."
               centrado={false}
             />
-            <Button como="a" href="/contacto" variante="primario" className="mt-8">
+            <Button como="ruta" href="/contacto" variante="primario" className="mt-8">
               Reservar una visita
             </Button>
           </div>

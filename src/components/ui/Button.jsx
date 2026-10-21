@@ -1,7 +1,10 @@
 /**
  * Botón reutilizable con variantes de marca.
- * Puede renderizarse como <button> o como <a>/<Link> mediante la prop `como`.
+ * Puede renderizarse como <button>, como <a>/<Link> mediante la prop `como`
+ * o como enlace interno del router mediante `como="ruta"`.
  */
+import { Link } from 'react-router-dom'
+
 const variantes = {
   primario:
     'bg-cuero-900 text-crema-50 hover:bg-cuero-800 shadow-suave hover:shadow-medio',
@@ -35,6 +38,16 @@ export default function Button({
     tamanos[tamano] ?? tamanos.md,
     className,
   ].join(' ')
+
+  if (como === 'ruta') {
+    // Enlace interno: React Router aplica el basename, de modo que funciona
+    // tanto en la raíz del dominio como bajo /<repositorio>/ en GitHub Pages.
+    return (
+      <Link to={href} className={clases} {...props}>
+        {children}
+      </Link>
+    )
+  }
 
   if (como === 'a') {
     return (

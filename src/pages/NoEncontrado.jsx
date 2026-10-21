@@ -13,10 +13,10 @@ export default function NoEncontrado() {
           para seguir explorando nuestro catálogo.
         </p>
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-          <Button como="a" href="/" variante="primario">
+          <Button como="ruta" href="/" variante="primario">
             Ir al inicio
           </Button>
-          <Button como="a" href="/productos" variante="secundario">
+          <Button como="ruta" href="/productos" variante="secundario">
             Ver productos
           </Button>
         </div>

@@ -4,6 +4,8 @@
  * en el futuro (fetch desde /public/catalogo.json o un CMS externo).
  */
 
+import { recurso } from '../utils/recursos.js'
+
 export const categorias = [
   {
     id: 'carteras',
@@ -40,7 +42,7 @@ export const productos = [
     stock: true,
     destacado: true,
     badges: ['Más vendido', 'Hecho a mano'],
-    imagenes: ['/productos/cartera.svg', '/productos/cartera-alt.svg'],
+    imagenes: [recurso('/productos/cartera.svg'), recurso('/productos/cartera-alt.svg')],
     descripcionLarga:
       'Diseñada en nuestro taller de Lima, la cartera "Soy Lima" combina un cuero vacuno de curtido vegetal de 1.2 mm con un forro de lino natural. Su estructura semirígida mantiene la forma y el cierre de cremallera de latón cepillado resiste el uso diario. Lleva un bolsillo interior con cremallera, tres ranuras para tarjetas y un compartmentamiento amplio para celular y documentos.',
   },
@@ -58,7 +60,7 @@ export const productos = [
     stock: true,
     destacado: true,
     badges: ['Nuevo'],
-    imagenes: ['/productos/cartera-alt.svg'],
+    imagenes: [recurso('/productos/cartera-alt.svg')],
     descripcionLarga:
       'La "Andina" es nuestra tote de mayor capacidad: cuero full grain sin pulir, que desarrolla una pátina única con el uso. Las asas van enrolladas y cosidas a mano para resistir el peso, y la base lleva refuerzo con el mismo cuero para evitar la deformación.',
   },
@@ -76,7 +78,7 @@ export const productos = [
     stock: true,
     destacado: true,
     badges: ['Más vendido'],
-    imagenes: ['/productos/billetera.svg'],
+    imagenes: [recurso('/productos/billetera.svg')],
     descripcionLarga:
       'Billetera de seis compartimentos para tarjetas, dos ranuras para billetes y un bolsillo con cierre para monedas. El borde está sellado a mano con cera para evitar que las esquinas se despeguen.',
   },
@@ -94,7 +96,7 @@ export const productos = [
     stock: true,
     destacado: false,
     badges: [],
-    imagenes: ['/productos/billetera-alt.svg'],
+    imagenes: [recurso('/productos/billetera-alt.svg')],
     descripcionLarga:
       'Diseñado para quien lleva lo mínimo: cuatro tarjetas, un par de billetes doblados y nada más. Perfil slim de 12 mm y logo grabado en lugar de prensado.',
   },
@@ -112,7 +114,7 @@ export const productos = [
     stock: true,
     destacado: true,
     badges: ['Más vendido'],
-    imagenes: ['/productos/cinturon.svg'],
+    imagenes: [recurso('/productos/cinturon.svg')],
     descripcionLarga:
       'Cinturón de una sola pieza de cuero de 4 mm, sin empalmes, con hebilla de latón cepillado y remaches reales. Se adapta a la cintura con el uso y admite ajuste de orificios en tallas estándar.',
   },
@@ -130,7 +132,7 @@ export const productos = [
     stock: false,
     destacado: false,
     badges: ['Por encargo'],
-    imagenes: ['/productos/cinturon-alt.svg'],
+    imagenes: [recurso('/productos/cinturon-alt.svg')],
     descripcionLarga:
       'Una pieza de autor: cuero de 5 cm con moleteado en relieve realizado a mano y costuras en hilo contrastante. Producción bajo pedido, 12 días hábiles.',
   },
@@ -148,7 +150,7 @@ export const productos = [
     stock: true,
     destacado: true,
     badges: ['Nuevo'],
-    imagenes: ['/productos/mochila.svg'],
+    imagenes: [recurso('/productos/mochila.svg')],
     descripcionLarga:
       'Diseñada para la ciudad: 20 litros de capacidad, compartimento acolchado para laptop hasta 15 pulgadas, dos pockets frontales con cremallera y correas ergonómicas con refuerzo de cuero en los puntos de tensión.',
   },
@@ -166,7 +168,7 @@ export const productos = [
     stock: true,
     destacado: false,
     badges: [],
-    imagenes: ['/productos/bolso.svg'],
+    imagenes: [recurso('/productos/bolso.svg')],
     descripcionLarga:
       'Un weekender de 48 horas: cuero full grain en todo el cuerpo exterior, base reforzada para soportar el peso y tirantes acolchados. Cabe un trolley de cabina y ropa para cuatro días.',
   },
@@ -184,7 +186,7 @@ export const productos = [
     stock: true,
     destacado: false,
     badges: ['Ideal para regalo'],
-    imagenes: ['/productos/accesorio.svg'],
+    imagenes: [recurso('/productos/accesorio.svg')],
     descripcionLarga:
       'Marco de cuero con ventana de mica, pie desmontable de corcho yranura posterior para fotografías de hasta 15 × 20 cm. Embalaje individual con bolsa de algodón.',
   },
@@ -203,7 +205,7 @@ export const productos = [
     stock: true,
     destacado: true,
     badges: ['Regalo corporativo'],
-    imagenes: ['/productos/accesorio-alt.svg'],
+    imagenes: [recurso('/productos/accesorio-alt.svg')],
     descripcionLarga:
       'Tres piezas de la misma partida de cuero para que la variación de color sea mínima. Presentación en caja kraft con separador de algodón, lista para corporativos y fechas especiales.',
   },
@@ -221,7 +223,7 @@ export const productos = [
     stock: true,
     destacado: false,
     badges: [],
-    imagenes: ['/productos/cartera.svg'],
+    imagenes: [recurso('/productos/cartera.svg')],
     descripcionLarga:
       'Diseñada para el bolsillo trasero: formato compacto, cierre de botón de latón y dos compartimentos interiores. El cuero es de curtido suave para que tenga poco volumen.',
   },
@@ -239,7 +241,7 @@ export const productos = [
     stock: true,
     destacado: false,
     badges: ['Personalizable', 'Por encargo'],
-    imagenes: ['/productos/cinturon.svg'],
+    imagenes: [recurso('/productos/cinturon.svg')],
     descripcionLarga:
       'Borrador de producto de demostración para la plantilla: cinturón a medida con grabado de iniciales y elección de color. Plazo de entrega de 10 días hábiles.',
   },

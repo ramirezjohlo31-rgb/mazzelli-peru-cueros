@@ -38,7 +38,7 @@ export default function ProductoDetalle() {
           <p className="mt-3 text-tinta-500">
             El producto que buscas ya no está disponible o el enlace es incorrecto.
           </p>
-          <Button como="a" href="/productos" variante="primario" className="mt-8">
+          <Button como="ruta" href="/productos" variante="primario" className="mt-8">
             Volver al catálogo
           </Button>
         </div>
@@ -167,7 +167,7 @@ export default function ProductoDetalle() {
                 <IconoWhatsapp className="h-5 w-5" />
                 Consultar por WhatsApp
               </Button>
-              <Button como="a" href="/contacto" variante="secundario">
+              <Button como="ruta" href="/contacto" variante="secundario">
                 Solicitar cotización
               </Button>
             </div>

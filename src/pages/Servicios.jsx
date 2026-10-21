@@ -167,7 +167,7 @@ export default function Servicios() {
             Escríbenos a {empresa.emailVentas} o por WhatsApp. Respondemos en menos de 24
             horas hábiles.
           </p>
-          <Button como="a" href="/contacto" variante="oro" tamano="lg">
+          <Button como="ruta" href="/contacto" variante="oro" tamano="lg">
             Ir al formulario
           </Button>
         </div>

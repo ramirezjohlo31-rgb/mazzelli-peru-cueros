@@ -1,4 +1,5 @@
 import { empresa, proceso } from '../data/empresa.js'
+import { recurso } from '../utils/recursos.js'
 import Section from '../components/ui/Section.jsx'
 import SectionTitle from '../components/ui/SectionTitle.jsx'
 import Button from '../components/ui/Button.jsx'
@@ -30,7 +31,7 @@ export default function Nosotros() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="marco-imagen aspect-[4/3] overflow-hidden rounded-cuero border border-crema-200">
             <img
-              src="/nosotros.svg"
+              src={recurso('nosotros.svg')}
               alt="Taller de curtido de Mazzelli"
               className="h-full w-full object-cover"
             />
@@ -183,7 +184,7 @@ export default function Nosotros() {
             Reciben visitas al taller los viernes con cita previa. Te mostramos el proceso
             completo, de la tina al empaque.
           </p>
-          <Button como="a" href="/contacto" variante="oro" tamano="lg">
+          <Button como="ruta" href="/contacto" variante="oro" tamano="lg">
             Agendar una visita
           </Button>
         </div>

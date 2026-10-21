@@ -72,6 +72,31 @@ const SILUETAS = {
 }
 
 /* ------------------------------------------------------------------ */
+/* Utilidades de XML                                                   */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Escapa una cadena para usarla como contenido de un elemento SVG.
+ * `&`, `<` y `>` son especiales; las comillas no, salvo dentro de un atributo.
+ */
+function escaparTexto(texto) {
+  return String(texto)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+}
+
+/**
+ * Escapa una cadena para usarla dentro de un atributo entrecomillado con
+ * comillas dobles. Sin este escape, un título como `Cartera "Soy Lima"`
+ * produce `aria-label="Cartera "Soy Lima""`, que es XML inválido: el
+ * navegador rechaza el SVG completo y la imagen aparece rota.
+ */
+function escaparAtributo(texto) {
+  return escaparTexto(texto).replace(/"/g, '&quot;')
+}
+
+/* ------------------------------------------------------------------ */
 /* Plantilla base                                                      */
 /* ------------------------------------------------------------------ */
 function ilustracion({
@@ -84,8 +109,12 @@ function ilustracion({
   etiqueta = 'MAZZELLI · CUEROS PERÚ',
 }) {
   const [c1, c2, c3] = PALETAS[paleta]
+  const tituloAttr = escaparAtributo(titulo)
+  const tituloTexto = escaparTexto(titulo)
+  const subtituloTexto = escaparTexto(subtitulo)
+  const etiquetaTexto = escaparTexto(etiqueta)
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${ancho} ${alto}" width="${ancho}" height="${alto}" role="img" aria-label="${titulo}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${ancho} ${alto}" width="${ancho}" height="${alto}" role="img" aria-label="${tituloAttr}">
   <defs>
     <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="${c3}"/>
@@ -134,12 +163,12 @@ function ilustracion({
 
   <!-- textos -->
   <text x="56" y="${alto - 74}" font-family="Georgia, 'Playfair Display', serif"
-        font-size="26" font-weight="700" fill="rgba(255,255,255,.92)">${titulo}</text>
+        font-size="26" font-weight="700" fill="rgba(255,255,255,.92)">${tituloTexto}</text>
   <text x="56" y="${alto - 48}" font-family="Helvetica, Arial, sans-serif"
-        font-size="14" letter-spacing="3" fill="rgba(255,255,255,.6)">${subtitulo}</text>
+        font-size="14" letter-spacing="3" fill="rgba(255,255,255,.6)">${subtituloTexto}</text>
   <text x="${ancho - 56}" y="${alto - 48}" text-anchor="end"
         font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="4"
-        fill="rgba(255,255,255,.5)">${etiqueta}</text>
+        fill="rgba(255,255,255,.5)">${etiquetaTexto}</text>
 </svg>
 `
 }

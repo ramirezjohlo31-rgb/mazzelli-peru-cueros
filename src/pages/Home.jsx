@@ -5,6 +5,7 @@ import { categorias, obtenerDestacados } from '../data/catalogo.js'
 import { servicios, testimonios } from '../data/servicios.js'
 import ProductCard from '../features/catalogo/ProductCard.jsx'
 import { enlaceWhatsapp, mensajeConsultaGeneral } from '../services/whatsapp.js'
+import { recurso } from '../utils/recursos.js'
 
 import Button from '../components/ui/Button.jsx'
 import Container from '../components/ui/Container.jsx'
@@ -55,7 +56,7 @@ export default function Home() {
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Button como="a" href="/productos" variante="oro" tamano="lg">
+                <Button como="ruta" href="/productos" variante="oro" tamano="lg">
                   Ver catálogo
                   <span aria-hidden="true">→</span>
                 </Button>
@@ -97,7 +98,7 @@ export default function Home() {
             {/* Composición visual */}
             <div className="relative hidden lg:block" aria-hidden="true">
               <div className="marco-imagen aspect-[4/5] overflow-hidden rounded-[2rem] border border-oro-500/25 shadow-cuero">
-                <img src="/hero.svg" alt="" className="h-full w-full object-cover" />
+                <img src={recurso('hero.svg')} alt="" className="h-full w-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-8 w-56 rounded-cuero border border-crema-200/20 bg-cuero-950/90 p-5 backdrop-blur">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-oro-500">
@@ -150,7 +151,7 @@ export default function Home() {
             centrado={false}
             className="flex-1"
           />
-          <Button como="a" href="/productos" variante="secundario">
+          <Button como="ruta" href="/productos" variante="secundario">
             Ver todo el catálogo
             <span aria-hidden="true">→</span>
           </Button>
@@ -305,7 +306,7 @@ export default function Home() {
                 <IconoWhatsapp className="h-5 w-5" />
                 Hablar por WhatsApp
               </Button>
-              <Button como="a" href="/contacto" variante="claro" tamano="lg">
+              <Button como="ruta" href="/contacto" variante="claro" tamano="lg">
                 Ir al formulario
               </Button>
             </div>
