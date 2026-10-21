@@ -104,6 +104,7 @@ src/
 ├── data/         catálogo, empresa, servicios
 ├── services/     whatsapp.js · mailto.js
 ├── hooks/        useDebounce · useMediaQuery
+├── utils/        recursos.js · rutas de los assets de public/
 └── styles/       tokens @theme de Tailwind v4
 ```
 

@@ -18,10 +18,7 @@ export default function useMediaQuery(consulta) {
     [consulta],
   )
 
-  const obtenerValor = useCallback(
-    () => window.matchMedia(consulta).matches,
-    [consulta],
-  )
+  const obtenerValor = useCallback(() => window.matchMedia(consulta).matches, [consulta])
 
   // El tercer argumento es el valor para el renderizado en servidor (SSR).
   return useSyncExternalStore(suscribir, obtenerValor, () => false)

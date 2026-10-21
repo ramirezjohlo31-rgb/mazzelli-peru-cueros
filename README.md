@@ -102,6 +102,7 @@ src/
 ├── data/           CAPA 3 · DATOS — catalogo.js, empresa.js, servicios.js
 ├── services/       Integraciones externas — whatsapp.js, mailto.js
 ├── hooks/          Hooks reutilizables — useDebounce, useMediaQuery
+├── utils/          Utilidades compartidas — recursos.js (rutas de `public/`)
 └── styles/         Sistema de diseño — tokens @theme de Tailwind v4
 ```
 

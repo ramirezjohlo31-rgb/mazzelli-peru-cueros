@@ -12,7 +12,6 @@ const ANIO = new Date().getFullYear()
 
 /** Pie de página con información corporativa, enlaces y contacto. */
 export default function Footer() {
-
   return (
     <footer className="bg-cuero-900 text-crema-100">
       <div className="contenedor grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">

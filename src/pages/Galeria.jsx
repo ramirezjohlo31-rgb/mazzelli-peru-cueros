@@ -7,22 +7,42 @@ import Button from '../components/ui/Button.jsx'
 /** Galería del taller y del proceso de fabricación. */
 export default function Galeria() {
   const imagenes = [
-    { src: recurso('galeria/seleccion.svg'), titulo: 'Selección de pieles', categoria: 'Taller' },
+    {
+      src: recurso('galeria/seleccion.svg'),
+      titulo: 'Selección de pieles',
+      categoria: 'Taller',
+    },
     {
       src: recurso('galeria/curtido.svg'),
       titulo: 'Tinas de curtido vegetal',
       categoria: 'Proceso',
     },
-    { src: recurso('galeria/corte.svg'), titulo: 'Corte y patronaje', categoria: 'Proceso' },
+    {
+      src: recurso('galeria/corte.svg'),
+      titulo: 'Corte y patronaje',
+      categoria: 'Proceso',
+    },
     { src: recurso('galeria/cosido.svg'), titulo: 'Costura a mano', categoria: 'Taller' },
     {
       src: recurso('galeria/acabado.svg'),
       titulo: 'Sellado y acabado de bordes',
       categoria: 'Proceso',
     },
-    { src: recurso('galeria/calidad.svg'), titulo: 'Control de calidad', categoria: 'Calidad' },
-    { src: recurso('galeria/empaque.svg'), titulo: 'Empaque y despacho', categoria: 'Logística' },
-    { src: recurso('galeria/tienda.svg'), titulo: 'Showroom en Lima', categoria: 'Showroom' },
+    {
+      src: recurso('galeria/calidad.svg'),
+      titulo: 'Control de calidad',
+      categoria: 'Calidad',
+    },
+    {
+      src: recurso('galeria/empaque.svg'),
+      titulo: 'Empaque y despacho',
+      categoria: 'Logística',
+    },
+    {
+      src: recurso('galeria/tienda.svg'),
+      titulo: 'Showroom en Lima',
+      categoria: 'Showroom',
+    },
   ]
 
   return (

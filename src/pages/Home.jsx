@@ -98,7 +98,11 @@ export default function Home() {
             {/* Composición visual */}
             <div className="relative hidden lg:block" aria-hidden="true">
               <div className="marco-imagen aspect-[4/5] overflow-hidden rounded-[2rem] border border-oro-500/25 shadow-cuero">
-                <img src={recurso('hero.svg')} alt="" className="h-full w-full object-cover" />
+                <img
+                  src={recurso('hero.svg')}
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -left-8 w-56 rounded-cuero border border-crema-200/20 bg-cuero-950/90 p-5 backdrop-blur">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-oro-500">

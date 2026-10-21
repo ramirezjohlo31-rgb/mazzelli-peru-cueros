@@ -180,7 +180,8 @@ mazzelli-peru-cueros/
 │   ├── data/              # CAPA 3 · DATOS (catalogo, empresa, servicios, navegacion)
 │   ├── services/          # Integraciones externas (whatsapp, mailto)
 │   ├── hooks/             # useDebounce, useMediaQuery
-│   ├── styles/            # tokens @theme y utilidades
+│   ├── utils/             # recursos.js (rutas de los archivos de public/)
+│   └── styles/            # tokens @theme y utilidades
 │   └── main.jsx
 ├── .github/workflows/deploy.yml
 └── vite.config.js · package.json · LICENSE
