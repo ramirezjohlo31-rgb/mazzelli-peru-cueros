@@ -1,0 +1,24 @@
+/* Utilidades de maquetación reutilizables (no generadas por Tailwind) */
+
+.contenedor {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 80rem;
+}
+
+@media (min-width: 1024px) {
+  .contenedor {
+    padding-inline: 2rem;
+  }
+}
+
+/* Oculta el scrollbar horizontal en carruseles */
+.sin-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sin-scrollbar::-webkit-scrollbar {
+  display: none;
+}

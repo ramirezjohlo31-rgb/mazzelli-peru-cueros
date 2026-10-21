@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Industrias Mazzelli-Perú Cueros E.I.R.L.
+   Sistema de diseño — Tailwind CSS v4 (configuración por CSS-first)
+   @theme genera automáticamente las utilidades: bg-cuero-900, text-oro-500,
+   font-display, etc.
+   ========================================================================== */
+
+@import 'tailwindcss';
+
+/* --------------------------------------------------------------------------
+   1. TOKENS DE MARCA
+   -------------------------------------------------------------------------- */
+@theme {
+  /* Cueros y marrones — base de la identidad */
+  --color-cuero-950: #1c1512;
+  --color-cuero-900: #3e2a20;
+  --color-cuero-800: #4e352a;
+  --color-cuero-700: #6b4a33;
+  --color-cognac-600: #7a4e2f;
+  --color-cognac-500: #8b5e3c;
+  --color-cognac-400: #a87b55;
+
+  /* Cremas — fondos, papel, superficie */
+  --color-crema-50: #faf6f0;
+  --color-crema-100: #f3ebdd;
+  --color-crema-200: #e8dcc8;
+  --color-crema-300: #d9c8ac;
+
+  /* Oro — detalles, acentos, badges */
+  --color-oro-500: #c89b3c;
+  --color-oro-400: #dbb25c;
+  --color-oro-300: #e8ca8a;
+
+  /* Tinta — texto principal */
+  --color-tinta-900: #1c1512;
+  --color-tinta-700: #3f3630;
+  --color-tinta-500: #6b615a;
+
+  /* Tipografía */
+  --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Sombras cálidas (el negro puro no existe en el cuero) */
+  --shadow-suave: 0 2px 12px rgb(60 42 32 / 0.08);
+  --shadow-medio: 0 8px 30px rgb(60 42 32 / 0.12);
+  --shadow-cuero: 0 18px 50px rgb(28 21 18 / 0.35);
+
+  /* Curvas */
+  --radius-cuero: 0.75rem;
+
+  /* Animaciones */
+  --animate-flotar: flotar 6s ease-in-out infinite;
+  --animate-entrada: entrada 0.6s ease-out both;
+
+  @keyframes flotar {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes entrada {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. ESTILOS BASE
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /*compensa el navbar fijo*/
+  }
+
+  body {
+    background-color: var(--color-crema-50);
+    color: var(--color-tinta-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-cuero-900);
+    line-height: 1.15;
+  }
+
+  /* Foco visible y coherente con la marca (accesibilidad) */
+  :focus-visible {
+    outline: 3px solid var(--color-oro-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-oro-500);
+    color: var(--color-cuero-950);
+  }
+
+  /* Respeta la preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. UTILIDADES PROPIAS
+   -------------------------------------------------------------------------- */
+@layer components {
+  /* Textura sutil de cuero para fondos héroe */
+  .textura-cuero {
+    background-image:
+      radial-gradient(circle at 20% 30%, rgb(255 255 255 / 0.06), transparent 45%),
+      radial-gradient(circle at 80% 70%, rgb(0 0 0 / 0.18), transparent 50%);
+  }
+
+  /* Filete dorado decorativo */
+  .filete-oro {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-oro-500), transparent);
+  }
+
+  /* Tarjeta con borde que se ilumina al pasar el cursor */
+  .tarjeta-cuero {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .tarjeta-cuero:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medio);
+    border-color: var(--color-oro-500);
+  }
+
+  /* Imagen de producto con degradado de respaldo si no carga */
+  .marco-imagen {
+    background: linear-gradient(135deg, var(--color-crema-200), var(--color-cognac-400));
+  }
+}
