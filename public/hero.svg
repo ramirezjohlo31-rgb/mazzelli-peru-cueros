@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100" role="img" aria-label="Cuero que cuenta historias">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7A5240"/>
+      <stop offset="55%" stop-color="#5C3A28"/>
+      <stop offset="100%" stop-color="#3E2A20"/>
+    </linearGradient>
+    <linearGradient id="cuerpo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A5240"/>
+      <stop offset="100%" stop-color="#3E2A20"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8CA8A"/>
+      <stop offset="50%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#8E6A22"/>
+    </linearGradient>
+    <radialGradient id="luz" cx="0.28" cy="0.22" r="0.8">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="1100" fill="url(#fondo)"/>
+  <rect width="900" height="1100" fill="url(#luz)"/>
+
+  <!-- textura de grano -->
+  <g opacity="0.14" fill="#ffffff">
+    <circle cx="0" cy="0" r="1"/>
+    <circle cx="97" cy="53" r="2"/>
+    <circle cx="194" cy="106" r="3"/>
+    <circle cx="291" cy="159" r="1"/>
+    <circle cx="388" cy="212" r="2"/>
+    <circle cx="485" cy="265" r="3"/>
+    <circle cx="582" cy="318" r="1"/>
+    <circle cx="679" cy="371" r="2"/>
+    <circle cx="776" cy="424" r="3"/>
+    <circle cx="873" cy="477" r="1"/>
+    <circle cx="70" cy="530" r="2"/>
+    <circle cx="167" cy="583" r="3"/>
+    <circle cx="264" cy="636" r="1"/>
+    <circle cx="361" cy="689" r="2"/>
+    <circle cx="458" cy="742" r="3"/>
+    <circle cx="555" cy="795" r="1"/>
+    <circle cx="652" cy="848" r="2"/>
+    <circle cx="749" cy="901" r="3"/>
+    <circle cx="846" cy="954" r="1"/>
+    <circle cx="43" cy="1007" r="2"/>
+    <circle cx="140" cy="1060" r="3"/>
+    <circle cx="237" cy="13" r="1"/>
+    <circle cx="334" cy="66" r="2"/>
+    <circle cx="431" cy="119" r="3"/>
+    <circle cx="528" cy="172" r="1"/>
+    <circle cx="625" cy="225" r="2"/>
+  </g>
+
+  <!-- marco con costura punteada -->
+  <rect x="26" y="26" width="848" height="1048" rx="18"
+        fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3"
+        stroke-dasharray="10 9" stroke-linecap="round"/>
+
+  <!-- sombra de la pieza -->
+  <ellipse cx="450" cy="992" rx="180" ry="22" fill="rgba(0,0,0,.22)"/>
+
+  
+    <rect x="300" y="235" width="200" height="180" rx="26" fill="url(#cuerpo)" stroke="rgba(255,255,255,.32)" stroke-width="3"/>
+    <path d="M340 235v-28a60 60 0 01120 0v28" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="10" stroke-linecap="round"/>
+    <rect x="340" y="300" width="120" height="52" rx="10" fill="rgba(0,0,0,.2)"/>
+    <rect x="386" y="318" width="28" height="10" rx="5" fill="url(#metal)"/>
+
+  <!-- textos -->
+  <text x="56" y="1026" font-family="Georgia, 'Playfair Display', serif"
+        font-size="26" font-weight="700" fill="rgba(255,255,255,.92)">Cuero que cuenta historias</text>
+  <text x="56" y="1052" font-family="Helvetica, Arial, sans-serif"
+        font-size="14" letter-spacing="3" fill="rgba(255,255,255,.6)">CURTIDO VEGETAL · HECHO A MANO</text>
+  <text x="844" y="1052" text-anchor="end"
+        font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="4"
+        fill="rgba(255,255,255,.5)">MAZZELLI · CUEROS PERÚ</text>
+</svg>

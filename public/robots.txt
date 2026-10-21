@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ramirezjohlo31-rgb.github.io/mazzelli-peru-cueros/sitemap.xml
